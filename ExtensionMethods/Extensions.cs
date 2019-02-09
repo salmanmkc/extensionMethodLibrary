@@ -32,5 +32,14 @@ namespace ExtensionMethods
             return shortest;
 
         }
+
+        public static string LongestWord(this string sentence)
+        {
+            string[] stringOfWords = sentence.Split(' ');
+            var sortByLength = stringOfWords.OrderBy(s => s.Length);
+            var longest = sortByLength.LastOrDefault();
+            return longest;
+
+        }
     }
 }

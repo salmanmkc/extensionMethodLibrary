@@ -44,6 +44,11 @@ namespace ExtensionMethods
                         string input3 = Console.ReadLine();
                         Console.WriteLine($"The shortest word in the string is: {input3.ShortestWord()}");
                         break;
+                    case '4':
+                        Console.WriteLine("Enter a string");
+                        string input4 = Console.ReadLine();
+                        Console.WriteLine($"The longest word in the string is: {input4.LongestWord()}");
+                        break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -74,6 +79,7 @@ namespace ExtensionMethods
             Console.WriteLine("(1) Convert a string to Long");
             Console.WriteLine("(2) Count the number of words in a string");
             Console.WriteLine("(3) Find the shortest word in a string");
+            Console.WriteLine("(4) Find the longest word in a string");
             Console.WriteLine("(Q) Quit the program");
         }
     }
