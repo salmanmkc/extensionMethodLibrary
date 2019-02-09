@@ -89,6 +89,11 @@ namespace ExtensionMethods
                         string stringToBeConverted = Console.ReadLine();
                         Console.WriteLine($"The char is: {stringToBeConverted.ToChar()}");
                         break;
+                    case "12": //this method I use two extension methods in one, the extension method to convert from string to char and then to int
+                        Console.WriteLine("Enter a char to be converted to int");
+                        string stringToBeConverted2 = Console.ReadLine();
+                        Console.WriteLine($"The string was converted to a char to an int: {stringToBeConverted2.ToChar().charToInt()}");
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -127,6 +132,7 @@ namespace ExtensionMethods
             Console.WriteLine("(9) Get the day in sentence format");
             Console.WriteLine("(10) Count how many times the string is in another string");
             Console.WriteLine("(11) Get the first char in string, making it a char");
+            Console.WriteLine("(12) Convert a char to int");
             Console.WriteLine("(Q) Quit the program");
         }
     }

@@ -196,5 +196,15 @@ namespace ExtensionMethods
             char charNow = input[0];
             return charNow;
         }
+
+        public static int charToInt(this char input)
+        {
+            int x;
+            if(!int.TryParse(input.ToString(), out x))
+            {
+                x = 0;
+            }
+            return x;
+        }
     }
 }
