@@ -27,8 +27,9 @@ namespace ExtensionMethods
         public static string ShortestWord(this string sentence)
         {
             string[] stringOfWords = sentence.Split(' ');
-            var sorted = stringOfWords.Min(s => s.ToString());
-            return sorted;
+            var sortByLength = stringOfWords.OrderBy(s => s.Length);
+            var shortest = sortByLength.FirstOrDefault();
+            return shortest;
 
         }
     }
