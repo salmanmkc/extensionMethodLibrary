@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,6 +22,14 @@ namespace ExtensionMethods
         public static int WordCount(this string sentence)
         {
             return sentence.Split(new char[] { ' ', '.', '?'}, StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+
+        public static string ShortestWord(this string sentence)
+        {
+            string[] stringOfWords = sentence.Split(' ');
+            var sorted = stringOfWords.Min(s => s.ToString());
+            return sorted;
+
         }
     }
 }
