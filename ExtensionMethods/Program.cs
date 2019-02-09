@@ -52,10 +52,18 @@ namespace ExtensionMethods
                     case '5':
                         Console.WriteLine("Enter a string");
                         string input5 = Console.ReadLine();
-                        Console.WriteLine("What word do you want, the 2nd largest, 3rd? Enter a index, 0 being the largest");
+                        Console.WriteLine("What word do you want, the 2nd largest, 3rd? Enter a index, 1 being the largest");
                         int input6 = 0;
                         int.TryParse(Console.ReadLine(), out input6);
-                        Console.WriteLine($"The {input6} longest word in the string is: {input5.LongestWord(input6)}");
+                        Console.WriteLine($"The {input6} shortest word in the string is: {input5.ShortestWord(input6 - 1)}");
+                        break;
+                    case '6':
+                        Console.WriteLine("Enter a string");
+                        string input7 = Console.ReadLine();
+                        Console.WriteLine("What word do you want, the 2nd largest, 3rd? Enter a index, 1 being the largest");
+                        int input8 = 0;
+                        int.TryParse(Console.ReadLine(), out input8);
+                        Console.WriteLine($"The {input8} longest word in the string is: {input7.LongestWord(input8 - 1)}");
                         break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
@@ -88,6 +96,8 @@ namespace ExtensionMethods
             Console.WriteLine("(2) Count the number of words in a string");
             Console.WriteLine("(3) Find the shortest word in a string");
             Console.WriteLine("(4) Find the longest word in a string");
+            Console.WriteLine("(5) Find the x shortest word in a string");
+            Console.WriteLine("(6) Find the x longest word in a string");
             Console.WriteLine("(Q) Quit the program");
         }
     }

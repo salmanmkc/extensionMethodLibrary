@@ -46,10 +46,10 @@ namespace ExtensionMethods
         {
             string[] stringOfWords = sentence.Split(' ');
             var sortByLength = (stringOfWords.OrderByDescending(s => s.Length)).ToArray();
-            foreach (var word in stringOfWords)
-            {
-                Console.WriteLine(word);
-            }
+            //foreach (var word in sortByLength)
+            //{
+            //    Console.WriteLine(word);
+            //}
             return sortByLength[value];
         }
 
@@ -57,6 +57,11 @@ namespace ExtensionMethods
         {
             string[] stringOfWords = sentence.Split(' ');
             var sortByLength = (stringOfWords.OrderBy(s => s.Length)).ToArray();
+            //foreach (var word in sortByLength)
+            //{
+            //    Console.WriteLine(word);
+            //}
+
             return sortByLength[value];
         }
     }
