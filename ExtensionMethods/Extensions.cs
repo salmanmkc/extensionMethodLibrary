@@ -19,6 +19,16 @@ namespace ExtensionMethods
             return result;
         }
 
+        public static int ToInt(this string value)
+        {
+            int result;
+            if (!int.TryParse(value, out result))
+            {
+                result = 0;
+            }
+            return result;
+        }
+
         public static int WordCount(this string sentence)
         {
             return sentence.Split(new char[] { ' ', '.', '?'}, StringSplitOptions.RemoveEmptyEntries).Length;
@@ -104,5 +114,41 @@ namespace ExtensionMethods
             }
 
         }
+
+        public static int ConvertTextToNumber(this string textNumber)
+        {
+            int x = 0;
+            switch (textNumber.ToLower())
+            {
+                case "one":
+                    return 1;
+                case "two":
+                    return 2;
+                case "three":
+                    return 3;
+                case "four":
+                    return 4;
+                case "five":
+                    return 5;
+                case "six":
+                    return 6;
+                case "seven":
+                    return 7;
+                case "eight":
+                    return 8;
+                case "nine":
+                    return 9;
+                default:
+                    return 0;
+
+            }
+
+
+
+
+
+            return x;
+        }
+        
     }
 }

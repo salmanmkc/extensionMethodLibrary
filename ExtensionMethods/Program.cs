@@ -64,6 +64,16 @@ namespace ExtensionMethods
                         int.TryParse(Console.ReadLine(), out input8);
                         Console.WriteLine($"The {input8.ReadableNumberSelection()} longest word in the string is: {input7.LongestWord(input8 - 1)}");
                         break;
+                    case '7':
+                        Console.WriteLine("Enter a number");
+                        string input9 = Console.ReadLine();
+                        Console.WriteLine($"The number is {input9.ToInt()}");
+                        break;
+                    case '8':
+                        Console.WriteLine("Enter a number spelled out: ");
+                        string input10 = Console.ReadLine();
+                        Console.WriteLine($"The number {input10} is now an int {input10.ConvertTextToNumber()}.");
+                        break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -97,6 +107,8 @@ namespace ExtensionMethods
             Console.WriteLine("(4) Find the longest word in a string");
             Console.WriteLine("(5) Find the x shortest word in a string");
             Console.WriteLine("(6) Find the x longest word in a string");
+            Console.WriteLine("(7) Convert a string to int, if not a valid parse then it gives 0");
+            Console.WriteLine("(8) Convert a word number to a numeric int");
             Console.WriteLine("(Q) Quit the program");
         }
     }
