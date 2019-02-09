@@ -12,7 +12,13 @@ namespace ExtensionMethods
         {
             Console.WriteLine("Enter a string");
             string input = Console.ReadLine();
+
+            //test ToLong, it will round since Long truncates with tryparse64
             long value = input.ToLong();
+            Console.WriteLine(value);
+
+            //stop from automatically closing
+            Console.ReadLine();
 
         }
 

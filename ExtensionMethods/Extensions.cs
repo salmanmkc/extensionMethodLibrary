@@ -18,5 +18,10 @@ namespace ExtensionMethods
             }
             return result;
         }
+
+        public static int WordCount(this string sentence)
+        {
+            return sentence.Split(new char[] { ' ', '.', '?'}, StringSplitOptions.RemoveEmptyEntries).Length;
+        }
     }
 }
