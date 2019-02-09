@@ -206,5 +206,21 @@ namespace ExtensionMethods
             }
             return x;
         }
+
+        public static string toSentenceCase(this string input)
+        {
+            //split sentence using regular expressions
+            string[] stringOfSentences = Regex.Split(input, @"(?<=[\.!\?])\s+");
+            //make a list to add each sentence to
+            StringBuilder sb = new StringBuilder();
+            List<string> x = new List<string>();
+            Console.WriteLine("Your corrected sentence");
+            for(int i = 0; i<stringOfSentences.Length; i++)
+            {
+                //add each sentence to the string builder, making the first letter in each a capital letter and leaving a space at the end
+                sb.Append(stringOfSentences[i].Substring(0, 1).ToUpper() + stringOfSentences[i].Substring(1) + ' ');
+            }
+            return sb.ToString();
+        }
     }
 }
