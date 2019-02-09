@@ -46,10 +46,18 @@ namespace ExtensionMethods
         {
             string[] stringOfWords = sentence.Split(' ');
             var sortByLength = (stringOfWords.OrderByDescending(s => s.Length)).ToArray();
-            //foreach (var word in sortByLength)
-            //{
-            //    Console.WriteLine(word);
-            //}
+
+            Console.WriteLine("Do you want to see the words ordered from largest to smallest? Y or N");
+            string input = Console.ReadLine();
+            if(input.ToUpper().Equals("Y"))
+            {
+                foreach (var word in sortByLength)
+                {
+                    Console.Write($"{word} ");
+                }
+                Console.WriteLine();
+            }
+
             return sortByLength[value];
         }
 
@@ -57,11 +65,16 @@ namespace ExtensionMethods
         {
             string[] stringOfWords = sentence.Split(' ');
             var sortByLength = (stringOfWords.OrderBy(s => s.Length)).ToArray();
-            //foreach (var word in sortByLength)
-            //{
-            //    Console.WriteLine(word);
-            //}
-
+            Console.WriteLine("Do you want to see the words ordered from smallest to largest? Y or N");
+            string input = Console.ReadLine();
+            if (input.ToUpper().Equals("Y"))
+            {
+                foreach (var word in sortByLength)
+                {
+                    Console.Write($"{word} ");
+                }
+                Console.WriteLine();
+            }
             return sortByLength[value];
         }
     }
