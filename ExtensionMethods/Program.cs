@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ExtensionMethods
@@ -19,7 +20,8 @@ namespace ExtensionMethods
                 Console.WriteLine("Choose an extension method to try");
                 DisplayMenu();
                 string choice = Console.ReadLine();
-                char selected = choice[0];
+                string choiceUpper = choice.ToUpper();
+                char selected = choiceUpper[0];
 
 
                 switch (selected)
@@ -39,6 +41,14 @@ namespace ExtensionMethods
                         break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
+                        Console.WriteLine("Closing applicatoin in 5 seconds");
+                        for (int i = 5; i > 0; i--)
+                        {
+                            //use string interpolation
+                            Console.Write($"{i} ");
+                            // put main thread to sleep for 1 second every loop
+                            Thread.Sleep(1000);
+                        }
                         running = false;
                         break;
                     default:
@@ -47,11 +57,10 @@ namespace ExtensionMethods
 
                 }
 
-                //leave a line after each run
+                // leave a blank line after running a handler
                 Console.WriteLine();
             }
-            //stop from automatically closing
-            Console.ReadLine();
+     
 
         }
 
