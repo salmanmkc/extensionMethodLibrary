@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ExtensionMethods
@@ -184,6 +185,16 @@ namespace ExtensionMethods
                     return null;
             }
         }
+
+        public static int InStringCount(this string input, string checkIfIntString)
+        {
+            return Regex.Matches(checkIfIntString, input).Count;
+        }
         
+        public static char ToChar(this string input)
+        {
+            char charNow = input[0];
+            return charNow;
+        }
     }
 }
