@@ -99,6 +99,11 @@ namespace ExtensionMethods
                         string paragraph = Console.ReadLine();
                         Console.WriteLine($"Your new and corrected sentence: \n{paragraph.toSentenceCase()}"); 
                         break;
+                    case "14": //this method I use two extension methods in one, the extension method to convert from string to char and then to int
+                        Console.WriteLine("Enter a paragraph to be converted to sentence case");
+                        string fullName = Console.ReadLine();
+                        Console.WriteLine($"Your name in proper format: \n{fullName.toNameCase()}");
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -139,6 +144,7 @@ namespace ExtensionMethods
             Console.WriteLine("(11) Get the first char in string, making it a char");
             Console.WriteLine("(12) Convert a char to int");
             Console.WriteLine("(13) Convert a paragraph into sentence case");
+            Console.WriteLine("(14) Convert name to 'sentence case'");
             Console.WriteLine("(Q) Quit the program");
         }
     }

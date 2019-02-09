@@ -207,18 +207,33 @@ namespace ExtensionMethods
             return x;
         }
 
+
+        //both of the extension methods below are similar, I use string builders, regular expressions, and I switch between for loop/foreach loop
+
+
+        //here I demonsrate using the for loop
         public static string toSentenceCase(this string input)
         {
             //split sentence using regular expressions
             string[] stringOfSentences = Regex.Split(input, @"(?<=[\.!\?])\s+");
             //make a list to add each sentence to
             StringBuilder sb = new StringBuilder();
-            List<string> x = new List<string>();
-            Console.WriteLine("Your corrected sentence");
             for(int i = 0; i<stringOfSentences.Length; i++)
             {
                 //add each sentence to the string builder, making the first letter in each a capital letter and leaving a space at the end
                 sb.Append(stringOfSentences[i].Substring(0, 1).ToUpper() + stringOfSentences[i].Substring(1) + ' ');
+            }
+            return sb.ToString();
+        }
+
+        //here I demonstrate using the foreach loop
+        public static string toNameCase(this string fullName)
+        {
+            string[] names = Regex.Split(fullName, " ");
+            StringBuilder sb = new StringBuilder();
+            foreach(string name in names)
+            {
+                sb.Append(name.Substring(0, 1).ToUpper() + name.Substring(1) + ' ');
             }
             return sb.ToString();
         }
