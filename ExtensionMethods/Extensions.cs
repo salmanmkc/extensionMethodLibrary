@@ -42,7 +42,7 @@ namespace ExtensionMethods
 
         }
 
-        public static string LongestWord(this string sentence, int value)
+        public static string LongestWord(this string sentence, int value) //overload method
         {
             string[] stringOfWords = sentence.Split(' ');
             var sortByLength = (stringOfWords.OrderByDescending(s => s.Length)).ToArray();
@@ -61,7 +61,7 @@ namespace ExtensionMethods
             return sortByLength[value];
         }
 
-        public static string ShortestWord(this string sentence, int value)
+        public static string ShortestWord(this string sentence, int value) //overload method
         {
             string[] stringOfWords = sentence.Split(' ');
             var sortByLength = (stringOfWords.OrderBy(s => s.Length)).ToArray();
@@ -76,6 +76,33 @@ namespace ExtensionMethods
                 Console.WriteLine();
             }
             return sortByLength[value];
+        }
+
+        public static string ReadableNumberSelection(this int input)
+        {
+            string selection = input.ToString();
+
+            //exceptions to the switch selection case are numbers ending in 11, 12 and 13
+            if(selection.Length > 1)
+            {
+                if (selection.Substring(selection.Length -2).Equals("11") || selection.Substring(selection.Length - 2).Equals("12") || selection.Substring(selection.Length - 2).Equals("13"))
+                {
+                    return selection + "th";
+                }
+            }
+           
+            char lastNumberInSelectoin = selection[selection.Length - 1];
+            switch (lastNumberInSelectoin) {
+                case '1':
+                    return selection + "st";
+                case '2':
+                    return selection + "nd";
+                case '3':
+                    return selection + "rd";
+                default:
+                    return selection + "th";
+            }
+
         }
     }
 }

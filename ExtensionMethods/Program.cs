@@ -15,9 +15,8 @@ namespace ExtensionMethods
 
             while (running)
             {
-
-
                 Console.WriteLine("Choose an extension method to try");
+                // call method to display the menu to the user, they can choose what they want
                 DisplayMenu();
                 string choice = Console.ReadLine();
                 string choiceUpper = choice.ToUpper();
@@ -55,7 +54,7 @@ namespace ExtensionMethods
                         Console.WriteLine("What word do you want, the 2nd largest, 3rd? Enter a index, 1 being the largest");
                         int input6 = 0;
                         int.TryParse(Console.ReadLine(), out input6);
-                        Console.WriteLine($"The {input6} shortest word in the string is: {input5.ShortestWord(input6 - 1)}");
+                        Console.WriteLine($"The {input6.ReadableNumberSelection()} shortest word in the string is: {input5.ShortestWord(input6 - 1)}");
                         break;
                     case '6':
                         Console.WriteLine("Enter a string");
@@ -63,7 +62,7 @@ namespace ExtensionMethods
                         Console.WriteLine("What word do you want, the 2nd largest, 3rd? Enter a index, 1 being the largest");
                         int input8 = 0;
                         int.TryParse(Console.ReadLine(), out input8);
-                        Console.WriteLine($"The {input8} longest word in the string is: {input7.LongestWord(input8 - 1)}");
+                        Console.WriteLine($"The {input8.ReadableNumberSelection()} longest word in the string is: {input7.LongestWord(input8 - 1)}");
                         break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
