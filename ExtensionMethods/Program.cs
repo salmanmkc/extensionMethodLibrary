@@ -49,6 +49,14 @@ namespace ExtensionMethods
                         string input4 = Console.ReadLine();
                         Console.WriteLine($"The longest word in the string is: {input4.LongestWord()}");
                         break;
+                    case '5':
+                        Console.WriteLine("Enter a string");
+                        string input5 = Console.ReadLine();
+                        Console.WriteLine("What word do you want, the 2nd largest, 3rd? Enter a index, 0 being the largest");
+                        int input6 = 0;
+                        int.TryParse(Console.ReadLine(), out input6);
+                        Console.WriteLine($"The {input6} longest word in the string is: {input5.LongestWord(input6)}");
+                        break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
