@@ -104,6 +104,12 @@ namespace ExtensionMethods
                         string fullName = Console.ReadLine();
                         Console.WriteLine($"Your name in proper format: \n{fullName.toNameCase()}");
                         break;
+                    case "15": //this method I use two extension methods in one, the extension method to convert from string to char and then to int
+                        Console.WriteLine("Enter the file path");
+                        string path = Console.ReadLine();
+                        string correctPath = @path;
+                        Console.WriteLine(correctPath.LargestFile());
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -122,8 +128,12 @@ namespace ExtensionMethods
 
                 }
 
+               
                 // leave a blank line after running a handler
                 Console.WriteLine();
+
+                Console.WriteLine("Press any key to run another program...");
+                Console.ReadKey();
             }
      
 
@@ -145,6 +155,7 @@ namespace ExtensionMethods
             Console.WriteLine("(12) Convert a char to int");
             Console.WriteLine("(13) Convert a paragraph into sentence case");
             Console.WriteLine("(14) Convert name to 'sentence case'");
+            Console.WriteLine("(15) Find the biggest file in a direcory");
             Console.WriteLine("(Q) Quit the program");
         }
     }

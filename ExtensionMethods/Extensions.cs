@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -238,9 +239,16 @@ namespace ExtensionMethods
             return sb.ToString();
         }
 
-        //public static  largestFile(this string path)
-        //{
-
-        //}
+        public static string LargestFile(this string path)
+        {
+            var query = from file in new DirectoryInfo(path).GetFiles()
+                        orderby file.Length descending
+                        select file;
+            foreach(var file in query.Take(1))
+            {
+                return $"Largest file: {file.Name, -20} | {file.Length,15:N0} bits";
+            }
+            return "";
+        }
     }
 }
