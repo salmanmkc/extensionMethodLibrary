@@ -74,6 +74,10 @@ namespace ExtensionMethods
                         string input10 = Console.ReadLine();
                         Console.WriteLine($"The number {input10} is now an int {input10.ConvertTextToNumber()}.");
                         break;
+                    case '9':
+                        DateTime dateTime = DateTime.Now;
+                        Console.WriteLine($"The day in setence format is {dateTime.OutputDayAsSetenceFomat()}");
+                        break;
                     case 'Q':
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -109,6 +113,7 @@ namespace ExtensionMethods
             Console.WriteLine("(6) Find the x longest word in a string");
             Console.WriteLine("(7) Convert a string to int, if not a valid parse then it gives 0");
             Console.WriteLine("(8) Convert a word number to a numeric int");
+            Console.WriteLine("(9) Get the day in sentence format");
             Console.WriteLine("(Q) Quit the program");
         }
     }

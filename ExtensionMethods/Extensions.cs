@@ -143,11 +143,46 @@ namespace ExtensionMethods
 
             }
 
+        }
 
+        public static string OutputDayAsSetenceFomat(this DateTime dateTime)
+        {
+            int day = dateTime.Day;
+            string dayFormatted = day.ReadableNumberSelection();
+            string fullFormattedDate = dayFormatted + " of " + dateTime.NumericMonthToName() + " " + dateTime.Year;
+            return fullFormattedDate;
+        }
 
-
-
-            return x;
+        public static string NumericMonthToName(this DateTime dateTime)
+        {
+            int month = dateTime.Month;
+            switch (month)
+            {
+                case 1:
+                    return "January";
+                case 2:
+                    return "February";
+                case 3:
+                    return "March";
+                case 4:
+                    return "April";
+                case 5:
+                    return "May";
+                case 6:
+                    return "June";
+                case 7:
+                    return "July";
+                case 9:
+                    return "August";
+                case 10:
+                    return "September";
+                case 11:
+                    return "November";
+                case 12:
+                    return "December";
+                default:
+                    return null;
+            }
         }
         
     }
