@@ -94,21 +94,30 @@ namespace ExtensionMethods
                         string stringToBeConverted2 = Console.ReadLine();
                         Console.WriteLine($"The string was converted to a char to an int: {stringToBeConverted2.ToChar().charToInt()}");
                         break;
-                    case "13": //this method I use two extension methods in one, the extension method to convert from string to char and then to int
+                    case "13": 
                         Console.WriteLine("Enter a paragraph to be converted to sentence case");
                         string paragraph = Console.ReadLine();
                         Console.WriteLine($"Your new and corrected sentence: \n{paragraph.toSentenceCase()}"); 
                         break;
-                    case "14": //this method I use two extension methods in one, the extension method to convert from string to char and then to int
+                    case "14":
                         Console.WriteLine("Enter a paragraph to be converted to sentence case");
                         string fullName = Console.ReadLine();
                         Console.WriteLine($"Your name in proper format: \n{fullName.toNameCase()}");
                         break;
-                    case "15": //this method I use two extension methods in one, the extension method to convert from string to char and then to int
+                    case "15": 
                         Console.WriteLine("Enter the file path");
                         string path = Console.ReadLine();
                         string correctPath = @path;
-                        Console.WriteLine(correctPath.LargestFile());
+                        correctPath.LargestFile();
+                        break;
+                    case "16":
+                        Console.WriteLine("Enter the file path");
+                        string path2 = Console.ReadLine();
+                        string correctPath2 = @path2;
+                        Console.WriteLine("How many of the largest files do you want? ");
+                        int amount = Console.ReadLine().ToChar().charToInt();
+                        amount.GetType();
+                        correctPath2.LargestFile(amount);
                         break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
@@ -156,6 +165,7 @@ namespace ExtensionMethods
             Console.WriteLine("(13) Convert a paragraph into sentence case");
             Console.WriteLine("(14) Convert name to 'sentence case'");
             Console.WriteLine("(15) Find the biggest file in a direcory");
+            Console.WriteLine("(16) Find the x biggest files in a direcory");
             Console.WriteLine("(Q) Quit the program");
         }
     }

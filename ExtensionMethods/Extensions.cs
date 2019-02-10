@@ -239,16 +239,16 @@ namespace ExtensionMethods
             return sb.ToString();
         }
 
-        public static string LargestFile(this string path)
+        public static void LargestFile(this string path, int top=1)
         {
             var query = from file in new DirectoryInfo(path).GetFiles()
                         orderby file.Length descending
                         select file;
-            foreach(var file in query.Take(1))
+            foreach(var file in query.Take(top))
             {
-                return $"Largest file: {file.Name, -20} | {file.Length,15:N0} bits";
+                Console.WriteLine($"File: {file.Name, -20} | {file.Length,15:N0} bits");
             }
-            return "";
+           
         }
     }
 }
