@@ -103,8 +103,8 @@ namespace ExtensionMethods
                 }
             }
            
-            char lastNumberInSelectoin = selection[selection.Length - 1];
-            switch (lastNumberInSelectoin) {
+            char lastNumberInSelection = selection[selection.Length - 1];
+            switch (lastNumberInSelection) {
                 case '1':
                     return selection + "st";
                 case '2':
