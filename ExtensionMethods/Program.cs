@@ -17,12 +17,13 @@ namespace ExtensionMethods
             bool running = true;
             List<string> menuTasks = new List<string>();
             addTaskToList(menuTasks);
+          //  DisplayMenuList(menuTasks);
             while (running)
             {
                 Console.WriteLine("Choose an extension method to try");
                 // call method to display the menu to the user, they can choose what they want
-                DisplayMenu();
-                DisplayMenUQueue();
+                //DisplayMenu();
+                DisplayMenuList(menuTasks);
                 string choice = Console.ReadLine();
                 string choiceUpper = choice.ToUpper();
 
@@ -39,7 +40,7 @@ namespace ExtensionMethods
                         break;
                     case "2":
                         Console.WriteLine("Enter a string");
-                        string input2 = Console.ReadLine()
+                        string input2 = Console.ReadLine();
                         Console.WriteLine($"The number of words in the string is: {input2.WordCount()}");
                         break;
                     case "3":
@@ -153,11 +154,10 @@ namespace ExtensionMethods
 
         }
 
-        private static void DisplayMenUQueue()
+        private static void DisplayMenuList(List<string> menuTasks)
         {
-            menuTasks.ToArray();
-            for(int i = 0; x > menuTasks.Count(); i++)
-                Console.WriteLine($"({i}) {menuTasks[i]}");
+            for(int i = 0; i < menuTasks.Count(); i++)
+                Console.WriteLine($"({i+1}) {menuTasks[i]}");
         }
 
         private static void DisplayMenu()
