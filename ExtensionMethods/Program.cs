@@ -188,23 +188,23 @@ namespace ExtensionMethods
         public static void addTaskToList(List<string> menuTasks)
         {
             menuTasks.Add("Convert a string to Long");
-            menuTasks.Add("(2) Count the number of words in a string");
-            menuTasks.Add("(3) Find the shortest word in a string");
-            menuTasks.Add("(4) Find the longest word in a string");
-            menuTasks.Add("(5) Find the x shortest word in a string");
-            menuTasks.Add("(6) Find the x longest word in a string");
-            menuTasks.Add("(7) Convert a string to int, if not a valid parse then it gives 0");
-            menuTasks.Add("(8) Convert a word number to a numeric int");
-            menuTasks.Add("(9) Get the day in sentence format");
-            Console.WriteLine("(10) Count how many times the string is in another string");
-            Console.WriteLine("(11) Get the first char in string, making it a char");
-            Console.WriteLine("(12) Convert a char to int");
-            Console.WriteLine("(13) Convert a paragraph into sentence case");
-            Console.WriteLine("(14) Convert name to 'sentence case'");
-            Console.WriteLine("(15) Find the biggest file in a direcory");
-            Console.WriteLine("(16) Find the x biggest files in a direcory");
-            Console.WriteLine("(17) Convert a number to double");
-            Console.WriteLine("(Q) Quit the program");
+            menuTasks.Add("Count the number of words in a string");
+            menuTasks.Add("Find the shortest word in a string");
+            menuTasks.Add("Find the longest word in a string");
+            menuTasks.Add("Find the x shortest word in a string");
+            menuTasks.Add("Find the x longest word in a string");
+            menuTasks.Add("Convert a string to int, if not a valid parse then it gives 0");
+            menuTasks.Add("Convert a word number to a numeric int");
+            menuTasks.Add("Get the day in sentence format");
+            menuTasks.Add("Count how many times the string is in another string");
+            menuTasks.Add("Get the first char in string, making it a char");
+            menuTasks.Add("Convert a char to int");
+            menuTasks.Add("Convert a paragraph into sentence case");
+            menuTasks.Add("Convert name to 'sentence case'");
+            menuTasks.Add("Find the biggest file in a direcory");
+            menuTasks.Add("Find the x biggest files in a direcory");
+            menuTasks.Add("Convert a number to double");
+            menuTasks.Add("(Q) Quit the program");
 
 
         }
