@@ -158,7 +158,10 @@ namespace ExtensionMethods
         {
             for(int i = 0; i < menuTasks.Count(); i++)
                 Console.WriteLine($"({i+1}) {menuTasks[i]}");
+
+            Console.WriteLine("\n (Q) to quit the program");
         }
+
 
         private static void DisplayMenu()
         {
@@ -204,7 +207,6 @@ namespace ExtensionMethods
             menuTasks.Add("Find the biggest file in a direcory");
             menuTasks.Add("Find the x biggest files in a direcory");
             menuTasks.Add("Convert a number to double");
-            menuTasks.Add("(Q) Quit the program");
 
 
         }
