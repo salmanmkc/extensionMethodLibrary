@@ -31,6 +31,14 @@ namespace ExtensionMethods
             return result;
         }
 
+        public static double ToDouble(this string value)
+        {
+            double result;
+            if (!double.TryParse(value, out result))
+                result = 0;
+            return result;
+        }
+
         public static int WordCount(this string sentence)
         {
             return sentence.Split(new char[] { ' ', '.', '?'}, StringSplitOptions.RemoveEmptyEntries).Length;

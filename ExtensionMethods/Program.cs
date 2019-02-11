@@ -9,6 +9,7 @@ namespace ExtensionMethods
 {
     class Program
     {
+        static Queue<string> menuTasks = new Queue<String>();
         static void Main(string[] args)
         {
             bool running = true;
@@ -18,6 +19,7 @@ namespace ExtensionMethods
                 Console.WriteLine("Choose an extension method to try");
                 // call method to display the menu to the user, they can choose what they want
                 DisplayMenu();
+                DisplayMenUQueue();
                 string choice = Console.ReadLine();
                 string choiceUpper = choice.ToUpper();
 
@@ -34,7 +36,7 @@ namespace ExtensionMethods
                         break;
                     case "2":
                         Console.WriteLine("Enter a string");
-                        string input2 = Console.ReadLine();
+                        string input2 = Console.ReadLine()
                         Console.WriteLine($"The number of words in the string is: {input2.WordCount()}");
                         break;
                     case "3":
@@ -148,8 +150,16 @@ namespace ExtensionMethods
 
         }
 
+        private static void DisplayMenUQueue()
+        {
+            menuTasks.ToArray();
+            for(int i = 0; x > menuTasks.Count(); i++)
+                Console.WriteLine($"({i}) {menuTasks[i]}");
+        }
+
         private static void DisplayMenu()
         {
+
             Console.WriteLine("(1) Convert a string to Long");
             Console.WriteLine("(2) Count the number of words in a string");
             Console.WriteLine("(3) Find the shortest word in a string");
@@ -166,8 +176,19 @@ namespace ExtensionMethods
             Console.WriteLine("(14) Convert name to 'sentence case'");
             Console.WriteLine("(15) Find the biggest file in a direcory");
             Console.WriteLine("(16) Find the x biggest files in a direcory");
+            Console.WriteLine("(17) Convert a number to double");
             Console.WriteLine("(Q) Quit the program");
         }
+
+        
+
+        public static void addTaskToQueue(string task)
+        {
+            menuTasks.Enqueue(task);
+
+        }
+
+        
     }
 
 
