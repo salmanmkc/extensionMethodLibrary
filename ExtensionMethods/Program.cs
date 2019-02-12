@@ -9,15 +9,15 @@ namespace ExtensionMethods
 {
     class Program
     {
-       // static Queue<string> menuTasks = new Queue<String>();
+        // static Queue<string> menuTasks = new Queue<String>();
 
-        
+
         static void Main(string[] args)
         {
             bool running = true;
             List<string> menuTasks = new List<string>();
             addTaskToList(menuTasks);
-          //  DisplayMenuList(menuTasks);
+            //  DisplayMenuList(menuTasks);
             while (running)
             {
                 Console.WriteLine("Choose an extension method to try");
@@ -100,17 +100,17 @@ namespace ExtensionMethods
                         string stringToBeConverted2 = Console.ReadLine();
                         Console.WriteLine($"The string was converted to a char to an int: {stringToBeConverted2.ToChar().charToInt()}");
                         break;
-                    case "13": 
+                    case "13":
                         Console.WriteLine("Enter a paragraph to be converted to sentence case");
                         string paragraph = Console.ReadLine();
-                        Console.WriteLine($"Your new and corrected sentence: \n{paragraph.toSentenceCase()}"); 
+                        Console.WriteLine($"Your new and corrected sentence: \n{paragraph.toSentenceCase()}");
                         break;
                     case "14":
                         Console.WriteLine("Enter a paragraph to be converted to sentence case");
                         string fullName = Console.ReadLine();
                         Console.WriteLine($"Your name in proper format: \n{fullName.toNameCase()}");
                         break;
-                    case "15": 
+                    case "15":
                         Console.WriteLine("Enter the file path");
                         string path = Console.ReadLine();
                         string correctPath = @path;
@@ -143,21 +143,23 @@ namespace ExtensionMethods
 
                 }
 
-               
+
                 // leave a blank line after running a handler
                 Console.WriteLine();
 
                 Console.WriteLine("Press any key to run another program...");
                 Console.ReadKey();
             }
-     
+
 
         }
 
+    
+
         private static void DisplayMenuList(List<string> menuTasks)
         {
-            for(int i = 0; i < menuTasks.Count(); i++)
-                Console.WriteLine($"({i+1}) {menuTasks[i]}");
+            for (int i = 0; i < menuTasks.Count(); i++)
+                Console.WriteLine($"({i + 1}) {menuTasks[i]}");
 
             Console.WriteLine("\n (Q) to quit the program");
         }
@@ -186,7 +188,7 @@ namespace ExtensionMethods
             //Console.WriteLine("(Q) Quit the program");
         }
 
-        
+
 
         public static void addTaskToList(List<string> menuTasks)
         {
@@ -211,7 +213,7 @@ namespace ExtensionMethods
 
         }
 
-        
+
     }
 
 
