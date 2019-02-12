@@ -282,6 +282,11 @@ namespace ExtensionMethods
             return total;
         }
 
+        public static double doubleDivide(this double var, double var2)
+        {
+            return var / var2;
+        }
+
 
     }
 
