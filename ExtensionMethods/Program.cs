@@ -179,6 +179,13 @@ namespace ExtensionMethods
                         int userinput4 = int.Parse(Console.ReadLine());
                         Console.WriteLine($"{userinput3} divided by {userinput4} is {userinput3.intDivide(userinput4)}");
                         break;
+                    case "22":
+                        Console.WriteLine("Enter the first number");
+                        long userinput5 = Console.ReadLine().ToLong();
+                        Console.WriteLine("Enter the number you want to divide the other number by");
+                        long userinput6 = Console.ReadLine().ToLong();
+                        Console.WriteLine($"{userinput5} divided by {userinput5} is {userinput6.longDivide(userinput5)}");
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");

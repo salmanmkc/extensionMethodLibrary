@@ -293,6 +293,12 @@ namespace ExtensionMethods
         }
 
 
+        public static long longDivide(this long var, long var2)
+        {
+            return var / var2;
+        }
+
+
     }
 
 }
