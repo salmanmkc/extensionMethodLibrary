@@ -171,6 +171,14 @@ namespace ExtensionMethods
                         Console.WriteLine("Enter the number you want to divide the other number by");
                         double userinput2 = double.Parse(Console.ReadLine());
                         Console.WriteLine($"{userinput} divided by {userinput2} is {userinput.doubleDivide(userinput2)}");
+                        break;
+                    case "21":
+                        Console.WriteLine("Enter the first number");
+                        int userinput3 = int.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter the number you want to divide the other number by");
+                        int userinput4 = int.Parse(Console.ReadLine());
+                        Console.WriteLine($"{userinput3} divided by {userinput4} is {userinput3.intDivide(userinput4)}");
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -258,6 +266,7 @@ namespace ExtensionMethods
             menuTasks.Add("Add numbers to an array and then sum then all");
             menuTasks.Add("Add numbers to an array and then multiply them all");
             menuTasks.Add("Divide two double numbers");
+            menuTasks.Add("Divide two integer numbers");
 
 
         }

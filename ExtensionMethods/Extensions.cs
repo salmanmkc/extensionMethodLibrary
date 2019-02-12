@@ -287,6 +287,11 @@ namespace ExtensionMethods
             return var / var2;
         }
 
+        public static int intDivide(this int var, int var2)
+        {
+            return var / var2;
+        }
+
 
     }
 
