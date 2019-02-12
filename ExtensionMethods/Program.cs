@@ -125,6 +125,30 @@ namespace ExtensionMethods
                         amount.GetType();
                         correctPath2.LargestFile(amount);
                         break;
+                    case "17":
+                        Console.WriteLine("Enter a string");
+                        string inputastring = Console.ReadLine();
+
+                        //test ToLong, it will round since Long truncates with tryparse64
+                        double valueasdouble = inputastring.ToDouble();
+                        Console.WriteLine(valueasdouble);
+                        break;
+                    case "18":
+                        List<int> arraytoinput = new List<int>();
+                        bool addingNumbers = true;
+                        while (addingNumbers)
+                        {
+                            Console.WriteLine("Enter a number to add to the array, press -1 to stop adding");
+                            int number = int.Parse(Console.ReadLine());
+                            if (number == -1)
+                            {
+                                addingNumbers = false;
+                                break;
+                            }
+                            arraytoinput.Add(number);
+                        }
+                        Console.WriteLine(arraytoinput.addAllNumbersInArray());
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -168,7 +192,7 @@ namespace ExtensionMethods
         private static void DisplayMenu()
         {
 
-            Console.WriteLine("(1) Convert a string to Long");
+            //Console.WriteLine("(1) Convert a string to Long");
             //Console.WriteLine("(2) Count the number of words in a string");
             //Console.WriteLine("(3) Find the shortest word in a string");
             //Console.WriteLine("(4) Find the longest word in a string");
@@ -209,6 +233,7 @@ namespace ExtensionMethods
             menuTasks.Add("Find the biggest file in a direcory");
             menuTasks.Add("Find the x biggest files in a direcory");
             menuTasks.Add("Convert a number to double");
+            menuTasks.Add("Add numbers to an array and then sum then all");
 
 
         }

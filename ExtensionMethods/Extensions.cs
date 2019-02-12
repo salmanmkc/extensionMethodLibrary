@@ -259,7 +259,17 @@ namespace ExtensionMethods
            
         }
 
-   
+        public static int addAllNumbersInArray(this List<int> inputarray)
+        {
+            int total = 0;
+            foreach (int number in inputarray)
+            {
+                total += number;
+            }
+            return total;
+        }
+
+
     }
 
 }
