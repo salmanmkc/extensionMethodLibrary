@@ -274,6 +274,7 @@ namespace ExtensionMethods
             menuTasks.Add("Add numbers to an array and then multiply them all");
             menuTasks.Add("Divide two double numbers");
             menuTasks.Add("Divide two integer numbers");
+            menuTasks.Add("Divide two long numbers");
 
 
         }
