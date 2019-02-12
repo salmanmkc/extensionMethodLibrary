@@ -149,6 +149,22 @@ namespace ExtensionMethods
                         }
                         Console.WriteLine(arraytoinput.addAllNumbersInArray());
                         break;
+                    case "19":
+                        List<int> arraytoinput2 = new List<int>();
+                        bool addingNumbers2 = true;
+                        while (addingNumbers2)
+                        {
+                            Console.WriteLine("Enter a number to add to the array, press -1 to stop adding");
+                            int number = int.Parse(Console.ReadLine());
+                            if (number == -1)
+                            {
+                                addingNumbers = false;
+                                break;
+                            }
+                            arraytoinput2.Add(number);
+                        }
+                        Console.WriteLine(arraytoinput2.multiplyAllNumbersInArray());
+                        break;
                     case "Q":
                         Console.WriteLine("Thank you for using my application");
                         Console.WriteLine("Closing applicatoin in 5 seconds");
@@ -234,6 +250,7 @@ namespace ExtensionMethods
             menuTasks.Add("Find the x biggest files in a direcory");
             menuTasks.Add("Convert a number to double");
             menuTasks.Add("Add numbers to an array and then sum then all");
+            menuTasks.Add("Add numbers to an array and then multiply them all");
 
 
         }

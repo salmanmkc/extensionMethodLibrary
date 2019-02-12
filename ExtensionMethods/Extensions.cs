@@ -269,6 +269,19 @@ namespace ExtensionMethods
             return total;
         }
 
+        public static int multiplyAllNumbersInArray(this List<int> inputarray)
+        {
+            int total = 0;
+            int run = 0;
+            foreach (int number in inputarray)
+            {
+                if (run != 0) total *= number;
+                else total += number;
+                run++;
+            }
+            return total;
+        }
+
 
     }
 
