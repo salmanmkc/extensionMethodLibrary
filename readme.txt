@@ -1,0 +1,1 @@
+This library is used to simplify the creation of programs. No longer do you have to imbed try catches for converting values from types, you van just call these extension methods. Want to find the largest file in a directory? Use an extension method on the path.
